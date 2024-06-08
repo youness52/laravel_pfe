@@ -65,7 +65,7 @@
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#bookRoom" data-room-id="{{ $room->id }}">
-                                            Book Room
+                                        Réserver salle
                                         </button>
                                     </td>
 
@@ -75,7 +75,7 @@
                     </table>
                 </div>
             @else
-                <p class="text-center">There are no rooms available at the time you have chosen</p>
+                <p class="text-center">il n'y a pas de salle disponibles à l'heure que vous avez choisie</p>
             @endif
         @endif
     </div>
@@ -84,7 +84,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Booking of a room</h5>
+                <h5 class="modal-title">Réservation d'une salle</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
