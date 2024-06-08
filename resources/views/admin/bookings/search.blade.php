@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        Search Room
+       Rechercher salle
     </div>
 
     <div class="card-body">
@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-1">
                     <button class="btn btn-success">
-                        Search
+                    Rechercher
                     </button>
                 </div>
             </div>

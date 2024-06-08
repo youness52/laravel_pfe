@@ -88,8 +88,8 @@ return [
         ],
     ],
     'event'          => [
-        'title'          => 'Événements',
-        'title_singular' => 'Événement',
+        'title'          => 'Réunions',
+        'title_singular' => 'Réunion',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => '',

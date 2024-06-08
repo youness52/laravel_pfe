@@ -34,6 +34,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'contact',
         'password',
         'created_at',
         'updated_at',
@@ -87,30 +88,6 @@ class User extends Authenticatable
 
     }
 
-    public function transactions()
-    {
-        return $this->hasMany(Transaction::class);
-    }
-
-    public function chargeCredits($hours, Room $room)
-    {
-        $amount = $hours * (int) $room->hourly_rate * 100;
-
-        if ($this->credits < $amount) {
-            return false;
-        }
-
-        $this->credits -= $amount;
-        $this->save();
-
-        Transaction::create([
-            'user_id'      => $this->id,
-            'room_id'      => $room->id,
-            'paid_amount'  => $amount,
-            'booking_time' => $hours,
-        ]);
-
-        return true;
-    }
+   
 
 }
