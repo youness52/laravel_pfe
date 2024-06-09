@@ -1,6 +1,9 @@
 ![image](https://github.com/youness52/laravel_pfe/assets/38602794/bcdb57f3-4339-40c7-8970-20350ce37598)
 
 
+![image](https://github.com/youness52/laravel_pfe/assets/38602794/d308292a-a88f-4ee6-b46d-6677b41f47f5)
+
+![image](https://github.com/youness52/laravel_pfe/assets/38602794/eb57717f-c4fc-4db1-9aed-d604afb0a5f1)
 
 
 ![image](https://github.com/youness52/laravel_pfe/assets/38602794/3d2965be-386e-4cd7-a199-58133b4e0169)
