@@ -7,7 +7,8 @@
 ![image](https://github.com/youness52/laravel_pfe/assets/38602794/eb57717f-c4fc-4db1-9aed-d604afb0a5f1)
 
 
-![image](https://github.com/youness52/laravel_pfe/assets/38602794/3d2965be-386e-4cd7-a199-58133b4e0169)
+![image](https://github.com/youness52/laravel_pfe/assets/38602794/239ff5bb-e2a6-466e-b7a0-95587dcd820c)
+
 
 
 ![image](https://github.com/youness52/laravel_pfe/assets/38602794/6b2105db-5bfe-49a5-9e65-4c2d5dacadda)
