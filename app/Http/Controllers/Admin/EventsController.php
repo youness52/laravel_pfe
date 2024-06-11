@@ -13,6 +13,7 @@ use App\User;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Mail;
 
 class EventsController extends Controller
 {
@@ -50,6 +51,18 @@ class EventsController extends Controller
             $eventService->createRecurringEvents($request->all());
         }
 
+        try {
+            $user = User::find($request->input('user_id'));
+            Mail::raw('Bonjour '.$user->name . ' Votre Réunion '. $request->input("title") .' est bien Crée a partir ' .$request->input("start_time") . ' a '.$request->input("end_time"), function ($message) use ($user) {
+                $message->to($user->email)
+                        ->subject('Créer Réunion');
+            });
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+      
+
         return redirect()->route('admin.events.index');
 
     }
@@ -70,7 +83,16 @@ class EventsController extends Controller
     public function update(UpdateEventRequest $request, Event $event)
     {
         $event->update($request->all());
+        try {
+            $user = User::find($request->input('user_id'));
+            Mail::raw('Bonjour '.$user->name . ' Votre Réunion '. $request->input("title") .' est bien modifier a partir ' .$request->input("start_time") . ' a '.$request->input("end_time"), function ($message) use ($user) {
+                $message->to($user->email)
+                        ->subject('modifier Réunion');
+            });
 
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
         return redirect()->route('admin.events.index');
 
     }
@@ -87,9 +109,7 @@ class EventsController extends Controller
     public function destroy(Event $event)
     {
         abort_if(Gate::denies('event_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
         $event->delete();
-
         return back();
 
     }
